@@ -4,8 +4,8 @@ ymaps.ready(init);
 function init() {
 
 	var myMap = new ymaps.Map("map", {
-		center: [51.703154, 36.140598],
-		zoom: 12,
+		center: [51.730110, 36.249851],
+		zoom: 17,
 		// Выключаем все управление картой
 		controls: []
 
@@ -13,10 +13,10 @@ function init() {
 
 	var myGeoObjects = [];
 
-	myGeoObjects[0] = new ymaps.Placemark([51.703154, 36.140598], {
+	myGeoObjects[0] = new ymaps.Placemark([51.730110, 36.249851], {
 		// Свойства. 
 		// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
-		balloonContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
+		balloonContent: '<div class="map-hint">"Профиль46", Курск, ул.Соловьиная 66А</div>',
 	}, {
 		// Необходимо указать данный тип макета.
 		iconLayout: 'default#image',
@@ -26,81 +26,6 @@ function init() {
 		// Смещение левого верхнего угла иконки относительно
 		// её «ножки» (точки привязки).
 		iconImageOffset: [-18, -26]
-	});
-
-	myGeoObjects[1] = new ymaps.Placemark([51.720771, 36.195773], {
-		// Свойства. 
-		// hintContent: '<div class="map-hint">Авто профи , Курск, ул.Гунатовская, 32</div>',
-		balloonContent: '<div class="map-hint">Авто профи, Курск, ул.Гунатовская, 32</div>',
-	}, {
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		iconImageHref: 'img/icons/map-marker.svg',
-		// Размеры метки.
-		iconImageSize: [151, 41],
-		// Смещение левого верхнего угла иконки относительно
-		// её «ножки» (точки привязки).
-		iconImageOffset: [-18, -26]
-	});
-
-	myGeoObjects[2] = new ymaps.Placemark([51.715085, 36.133600], {
-		// Свойства. 
-		hintContent: '<div class="map-hint">Авто профи, Курск, пр-кт В. Клыкова, 111</div>',
-		balloonContent: '<div class="map-hint">Авто профи, Курск, пр-кт В. Клыкова, 111</div>',
-	}, {
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		iconImageHref: 'img/icons/map-marker.svg',
-		// Размеры метки.
-		iconImageSize: [151, 41],
-		// Смещение левого верхнего угла иконки относительно
-		// её «ножки» (точки привязки).
-		iconImageOffset: [-18, -26]
-	});
-
-	myGeoObjects[3] = new ymaps.Placemark([51.675220, 36.158690], {
-		// Свойства. 
-		// hintContent: '<div class="map-hint">Авто профи,  Курск, Краснополянский пер. 6А</div>',
-		balloonContent: '<div class="map-hint">Авто профи,  Курск, Краснополянский пер. 6А</div>',
-	}, {
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		iconImageHref: 'img/icons/map-marker.svg',
-		// Размеры метки.
-		iconImageSize: [165, 40],
-		// Смещение левого верхнего угла иконки относительно
-		// её «ножки» (точки привязки).
-		iconImageOffset: [-18, -26]
-	});
-
-	myGeoObjects[4] = new ymaps.Placemark([51.650963, 36.140104], {
-		// Свойства. 
-		// hintContent: '<div class="map-hint">Авто профи,  Курск, Магистральный проезд 18</div>',
-		balloonContent: '<div class="map-hint">Авто профи,  Курск, Магистральный проезд 18</div>',
-	}, {
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		iconImageHref: 'img/icons/map-marker.svg',
-		// Размеры метки.
-		iconImageSize: [165, 40],
-		// Смещение левого верхнего угла иконки относительно
-		// её «ножки» (точки привязки).
-		iconImageOffset: [-18, -26]
-	});
-
-	myGeoObjects[5] = new ymaps.Placemark([51.718193, 36.083160], {
-		// Свойства. 
-		// hintContent: '<div class="map-hint">Авто профи,  Курский район, деревня Моква 1-я, Рябиновая улица, 10</div>',
-		balloonContent: '<div class="map-hint">Авто профи,  Курский район, деревня Моква 1-я, Рябиновая улица, 10</div>',
-	}, {
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		iconImageHref: 'img/icons/map-marker.svg',
-		// Размеры метки.
-		iconImageSize: [165, 40],
-		// Смещение левого верхнего угла иконки относительно
-		// её «ножки» (точки привязки).
-		iconImageOffset: [-16, -42]
 	});
 
 	// var clusterIcons=[{
