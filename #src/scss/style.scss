@@ -353,8 +353,35 @@ h4 {
 .products__card-charect-thickness {
 	width: 99px;
 	height: 24.5px;
-	border-radius: 15px;
-	border: 1px solid #000;
+}
+
+.products__card-charect-thickness .select__title {
+	color: #747474;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.products__card-charect-thickness .select__value {
+	position: relative;
+	font-size: 16px;
+	height: 24.5px;
+	padding: 0px 15px;
+}
+
+.products__card-charect-thickness .select__value:before {
+	margin-right: -3px;
+}
+
+.products__card-charect-thickness .select__options {
+	color: #747474;
+	position: absolute;
+	top: 15px;
+	border-radius: 0 0 20px 20px;
+	font-size: 16px;
+	padding: 10px 0px 5px 0px;
+	z-index: -1;
 }
 
 .products__card-charect-price {
