@@ -61,6 +61,7 @@
 
 .footer__top-phone-list-item {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 13px;
 
   &:last-child {
@@ -98,6 +99,7 @@
 
 .footer__top-schedule-row {
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 45px;
 
   &:last-child {
