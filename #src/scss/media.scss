@@ -359,7 +359,7 @@
 	}
 
 	.popup__form-block {
-		padding: 35px 15px;
+		padding: 75px 35px;
 	}
 
 	.benefits__item {
@@ -451,10 +451,10 @@
 		padding: 80px 0 51px 0 !important;
 	}
 
-	.our-services__icon {
-		width: 46px;
-		height: 639px;
-	}
+	// .our-services__icon {
+	// 	width: 46px;
+	// 	height: 639px;
+	// }
 
 	.our-services__icon::before {
 		background-position: center;
@@ -682,6 +682,20 @@
 
 	.products__btn {
 		margin-top: 25px;
+	}
+
+	.popup__form-block {
+		padding: 60px 15px 50px 15px;
+	}
+
+	.popup__close {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+
+	.popup__form-btn {
+		padding: 25px 35px;
 	}
 }
 

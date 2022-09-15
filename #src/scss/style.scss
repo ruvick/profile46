@@ -174,7 +174,7 @@ h4 {
 
 .about {
 	padding: 61px 0 120px 0;
-	background-position: 0 0;
+	background-position: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url('../img/about-bg.jpg');
@@ -227,8 +227,8 @@ h4 {
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, 25%);
-	width: 80px;
-	height: 643px;
+	width: 64px;
+	height: 656px;
 
 	&::before {
 		content: '';
@@ -238,7 +238,7 @@ h4 {
 		background-position: 0 0;
 		background-size: 100%;
 		background-repeat: no-repeat;
-		background-image: url('../img/our-services-icon.svg');
+		background-image: url('../img/our-services-icon.png');
 	}
 }
 
