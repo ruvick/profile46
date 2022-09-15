@@ -245,6 +245,7 @@ h4 {
 .our-services__row {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-bottom: 220px;
 
 	&:last-child {
@@ -264,6 +265,11 @@ h4 {
 
 .our-services__descp-text {
 	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+.our-services__descp-text:last-child {
+	margin-bottom: 0;
 }
 
 .our-services__descp-text_r {

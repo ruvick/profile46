@@ -3480,6 +3480,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .our-services__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 220px;
 }
 .our-services__row:last-child {
@@ -3498,6 +3499,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .our-services__descp-text {
   line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.our-services__descp-text:last-child {
+  margin-bottom: 0;
 }
 
 .our-services__descp-text_r {
