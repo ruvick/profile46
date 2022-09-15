@@ -1,8 +1,14 @@
 .footer {}
 
 .footer__top {
-  padding: 70px 0;
-  background: #252525;
+  padding: 70px 0 180px 0;
+  position: relative;
+  z-index: 50;
+  // background: #252525;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../img/footer-bg.png');
 }
 
 .footer__top-container {
@@ -131,6 +137,8 @@
 
 .footer__map {
   height: 400px;
+  margin-top: -75px;
+  z-index: -1;
 }
 
 

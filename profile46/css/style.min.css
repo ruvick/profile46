@@ -3241,8 +3241,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .footer__top {
-  padding: 70px 0;
-  background: #252525;
+  padding: 70px 0 180px 0;
+  position: relative;
+  z-index: 50;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/footer-bg.png");
 }
 
 .footer__top-container {
@@ -3366,6 +3371,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .footer__map {
   height: 400px;
+  margin-top: -75px;
+  z-index: -1;
 }
 
 .footer__notifications {
@@ -3854,11 +3861,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     background-size: 83%;
     background-position: center;
   }
-  .footer__top {
-    padding: 40px 0;
-  }
   .footer__top-btn {
     padding: 20px 35px;
+  }
+  .footer__top {
+    padding: 40px 0 120px 0 !important;
   }
 }
 @media (max-width: 730px) {
@@ -4167,7 +4174,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-bottom: 40px;
   }
   .footer__map {
-    height: 155px;
+    height: 235px;
   }
   .footer__top-phone-list-item-text {
     display: none;
@@ -4197,6 +4204,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
   .footer__notifications-text {
     margin-right: 36px;
+  }
+  .footer__top {
+    padding: 30px 0 73px 0 !important;
+    background-image: url("../img/footer-bg-mob.png");
   }
 }
 @media (max-width: 480px) {

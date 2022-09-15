@@ -201,12 +201,12 @@
 		background-position: center;
 	}
 
-	.footer__top {
-		padding: 40px 0;
-	}
-
 	.footer__top-btn {
 		padding: 20px 35px;
+	}
+
+	.footer__top {
+		padding: 40px 0 120px 0 !important;
 	}
 }
 
@@ -590,7 +590,7 @@
 	}
 
 	.footer__map {
-		height: 155px;
+		height: 235px;
 	}
 
 	.footer__top-phone-list-item-text {
@@ -628,6 +628,11 @@
 
 	.footer__notifications-text {
 		margin-right: 36px;
+	}
+
+	.footer__top {
+		padding: 30px 0 73px 0 !important;
+		background-image: url('../img/footer-bg-mob.png');
 	}
 }
 
