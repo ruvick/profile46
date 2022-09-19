@@ -5,3 +5,4 @@
 @@include('files/script.js', {})
 @@include('files/forms.js', {})
 @@include('files/scroll.js', {})
+@@include('files/prices.js', {})

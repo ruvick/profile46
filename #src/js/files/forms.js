@@ -226,8 +226,10 @@ function select_item(select) {
 		'</div></div>');
 
 	select_actions(select, select_parent);
+	console.log(select)
 }
 function select_actions(original, select) {
+	console.log(select)
 	const select_item = select.querySelector('.select__item');
 	const selectTitle = select.querySelector('.select__title');
 	const select_body_options = select.querySelector('.select__options');
@@ -255,6 +257,7 @@ function select_actions(original, select) {
 		select.querySelector('.select__value').innerHTML = '<span>' + selectedOptionsText + '</span>';
 	}
 	function selectItemActions(type) {
+		console.log(type)
 		if (!type) {
 			let selects = document.querySelectorAll('.select');
 			for (let index = 0; index < selects.length; index++) {
@@ -282,6 +285,7 @@ function select_actions(original, select) {
 			}
 		}
 		select_option.addEventListener('click', function () {
+			console.log(select_options);
 			for (let index = 0; index < select_options.length; index++) {
 				const el = select_options[index];
 				el.style.display = 'block';
