@@ -639,79 +639,94 @@ if (priceSlider) {
 // 	}
 // });
 
-// Валидация формы
-function form_validation(form) {
-	let valid_form = true
-
-	let all_form_input = form.querySelectorAll("input:required")
-
-	for (let i = 0; i < all_form_input.length; i++) {
-		if (all_form_input[i].value == "") {
-			valid_form = false
-			all_form_input[i].classList.add("_error")
-			all_form_input[i].addEventListener("focus", (e) => {
-				all_form_input[i].classList.remove("_error")
-			})
-		}
-	}
-
-	return valid_form;
-}
-
-// создание списка полей
-
-function get_form_comment(form) {
-	let fieeld_name = {
-		"all": []
-	}
-
-	let all_form_input = form.querySelectorAll("input")
-
-	for (let i = 0; i < all_form_input.length; i++) {
-		let tm = { "fild": all_form_input[i].name, "val": all_form_input[i].dataset.valuem };
-		fieeld_name.all.push(tm)
-	}
-
-	return fieeld_name;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-	let all_send_btn = document.querySelectorAll(".new_send_btn")
-
-	for (let i = 0; i < all_send_btn.length; i++) {
-		all_send_btn[i].addEventListener("click", function (e) {
+// Отправка файла плагином PHPMailer 
+document.addEventListener('DOMContentLoaded', function () {
+	// Заявка на Запросить прайс
+	let send_btns = document.querySelectorAll("._send_btn_price")
+	send_btns.forEach(element => {
+		element.onclick = (e) => {
 			e.preventDefault()
-			let form_id = all_send_btn[i].dataset.formid;
-			var form = document.getElementById(form_id);
-			var data = new FormData(form);
+			let formid = element.dataset.formid;
+			let msg = element.dataset.msg;
+			let form = document.getElementById(formid);
 
-			if (form_validation(form)) {
-				// let comment = JSON.stringify(get_form_comment(form))
-				// console.log(comment)  
+			let name = (form.querySelectorAll("input[name=name]").length == 0) ? "" : form.querySelectorAll("input[name=name]")[0].value;
+			let mail = (form.querySelectorAll("input[name=mail]").length == 0) ? "" : form.querySelectorAll("input[name=mail]")[0].value;
+			if (mail == "Email") { form.querySelectorAll("input[name=mail]")[0].classList.add("_error"); return }
 
-				let all_form_input = form.querySelectorAll("input")
+			var params = new URLSearchParams()
 
-				for (let i = 0; i < all_form_input.length; i++) {
-					data.append('fildname[]', all_form_input[i].name);
-					data.append('fildval[]', all_form_input[i].dataset.valuem);
+			params.append('name', name)
+			params.append('mail', mail)
+			params.append('msg', msg)
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.onload = function (e) {
+
+				if (xhr.status == 200) {
+
+					location.href = "/thanks.html"
+
+				} else {
+					console.log(xhr.status)
+					console.log(xhr.statusText)
+					alert("При отправке произошла ошибка")
 				}
-
-				data.append('action', "newsendr");
-				data.append('nonce', allAjax.nonce);
-
-				var xhr = new XMLHttpRequest();
-				xhr.open("POST", allAjax.ajaxurl, true);
-
-				xhr.onload = function () {
-					console.log("SEND!")
-					document.location.href = thencs_page
-				};
-
-				xhr.send(data);
 
 			}
 
+			xhr.onerror = function (msg) {
+				console.log("eroroa" + xhr.statusText)
+			}
 
-		})
-	}
+			xhr.open('POST', "https://profil-46.ru/sender-mail.php", true);
+			xhr.send(params);
+		}
+	})
+
+	// Заявка на Заказать звонок
+	let send_btns_callBack = document.querySelectorAll("._send_btn_callback")
+	send_btns_callBack.forEach(element => {
+		element.onclick = (e) => {
+			e.preventDefault()
+			let formid = element.dataset.formid;
+			let msg = element.dataset.msg;
+			let form = document.getElementById(formid);
+
+			let name = (form.querySelectorAll("input[name=name]").length == 0) ? "" : form.querySelectorAll("input[name=name]")[0].value;
+			let tel = (form.querySelectorAll("input[name=phone]").length == 0) ? "" : form.querySelectorAll("input[name=phone]")[0].value;
+			if (tel == "Номер телефона") { form.querySelectorAll("input[name=phone]")[0].classList.add("_error"); return }
+
+			var params = new URLSearchParams()
+
+			params.append('name', name)
+			params.append('tel', tel)
+			params.append('msg', msg)
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.onload = function (e) {
+
+				if (xhr.status == 200) {
+
+					location.href = "/thanks.html"
+
+				} else {
+					console.log(xhr.status)
+					console.log(xhr.statusText)
+					alert("При отправке произошла ошибка")
+				}
+
+			}
+
+			xhr.onerror = function (msg) {
+				console.log("eroroa" + xhr.statusText)
+			}
+
+			xhr.open('POST', "https://profil-46.ru/sender-callback.php", true);
+			xhr.send(params);
+		}
+	})
+
 })
