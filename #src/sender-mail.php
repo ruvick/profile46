@@ -23,6 +23,7 @@ if (
                         <title>'.$_REQUEST["msg"].'</title>
                     </head>
                     <body>
+                        <p>Заявка с окна: Запросить прайс</p>
                         <p>ИМЯ: '.$_REQUEST['name'].'</p>
                         <p>EMAIL: '.$_REQUEST['mail'].'</p>                                     
                     </body>
