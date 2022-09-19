@@ -15,7 +15,7 @@ if (
     }
 
 
-    $to = 'rudikov-web@yandex.ru';  
+    $to = 'rudikov-web@yandex.ru, asmi046@gmail.com, profil-46@mail.ru';  
     $subject = 'Обращение с сайта Профиль-46'; 
     $message = '
                 <html>
